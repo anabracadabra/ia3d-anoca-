@@ -5,9 +5,20 @@ const caixaresultado = document.querySelector('.caixa-resultado');
 const pergunta = [
     {
         enunciado:"pergunta 1",
-        alternativas:[
-            "alternativa 1",
-            "alternativa 2"
-        ]
+        alternativas:["alternativa 1","alternativa 2"]
     }
+    {
+        enunciado:"pergunta 1",
+        alternativas:["alternativa 1","alternativa 2"]
+    }
+    {
+        enunciado:"pergunta 1",
+        alternativas:["alternativa 1","alternativa 2"]
+    }
+    
 ]
+let atual=0;
+let pergunta;
+function mostrapergunta(){
+    
+}
