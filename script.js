@@ -4,22 +4,29 @@ const caixaalternativa = document.querySelector('.caixa-alternativa');
 const caixaresultado = document.querySelector('.caixa-resultado');
 const pergunta = [
     {
-        enunciado:"pergunta 1",
-        alternativas:["alternativa 1","alternativa 2"]
+        enunciado:"Você gosta da inteligencia artificial?",
+        alternativas:["SIM","NÃO"]
     }
     {
-        enunciado:"pergunta 1",
-        alternativas:["alternativa 1","alternativa 2"]
+        enunciado:"Você credita que as pessoas estão ficando alienadas por conta das IA's?",
+        alternativas:["SIM","NÃO"]
     }
     {
-        enunciado:"pergunta 1",
-        alternativas:["alternativa 1","alternativa 2"]
+        enunciado:"Você utiliza com frequência IA's?",
+        alternativas:["SIM","NÃO"]
     }
     
 ]
-let atual=0;
+let posicao=0;
 let pergunta;
 function mostrapergunta(){
-    perguntaAtual=perguntas[atual]
+    perguntaAtual=perguntas[posicao]
     caixapergunta.textContent=perguntaAtual.enunciado;
+}
+mostrapergunta();
+function mostraAlternativa(){
+    for(const alternativa){
+        const botao.alternativa= document.createElement("button")
+        botaoAlterntivas.textContent= alternativa;
+    }
 }
