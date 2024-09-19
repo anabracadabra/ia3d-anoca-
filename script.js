@@ -7,13 +7,13 @@ const perguntas = [
     {
         enunciado:"Você gosta da inteligencia artificial?",
         alternativas:["SIM","NÃO"]
-    }
+    },
     {
         enunciado:"Você credita que as pessoas estão ficando alienadas por conta das IA's?",
         alternativas:["SIM","NÃO"]
-    }
+    },
     {
-        enunciado:"Você utiliza com frequência IA's?",
+        enunciado:"Você utiliza com frequência IA?",
         alternativas:["SIM","NÃO"]
     }
     
@@ -26,9 +26,10 @@ function mostrapergunta(){
 }
 
 function mostraAlternativa(){
-    for(const alternativa of perguntaatual.alternativas){
-        const botao.alternativas= document.createElement("button");
+    for(const alternativa of perguntaAtual.alternativas){
+        const botaoAlternativas= document.createElement("button");
         botaoAlternativas.textContent= alternativa;
-        caixaalternativa.appendChild(botaoAlterntivas);
+        caixaAlternativa.appendChild(botaoAlterntivas);
     }
 }
+mostrapergunta();
