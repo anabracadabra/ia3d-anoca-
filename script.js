@@ -45,8 +45,7 @@ function mostraAlternativa(){
         const botaoAlternativas= document.createElement("button");
         botaoAlternativas.textContent= alternativa.texto;
         botaoAlternativas.addEventListener("click",function(){
-        posicao++;
-        mostrapergunta();
+    
         })
 
         caixaAlternativa.appendChild(botaoAlterntivas);
