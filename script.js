@@ -2,10 +2,11 @@ const caixaPrincipal = document.querySelector('.caixa-principal');
 const caixaPergunta = document.querySelector('.caixa-pergunta');
 const caixaAlternativa = document.querySelector('.caixa-alternativa');
 const caixaResultado = document.querySelector('.caixa-resultado');
+const textoResultado = document.querySelector('.texto-resultado');
 
 const perguntas = [
     {
-        enunciado: "Você gosta da ideia de Inteligência Artificial?",
+        enunciado: "A utilização de IAs pode representar um risco significativo para a privacidade das pessoas?",
         alternativas: [
             {
                 texto: "Sim",
@@ -18,7 +19,7 @@ const perguntas = [
         ]
     },
     {
-        enunciado: "Você utiliza frequentemente o ChatGpt?",
+        enunciado: "É possível que as IAs substituam completamente os humanos em todas as profissões?",
         alternativas: [
             {
                 texto: "Sim",
@@ -50,11 +51,11 @@ let perguntaAtual;
 let respostas = "";
 
 function mostraPergunta() {
-    if (posicao >= perguntas.length){
+    if (posicao >= pergunta.length){
         mostraResultado();
         return;
     }
-    perguntaAtual = perguntas[posicao];
+    perguntaAtual = pergunta[posicao];
     caixaPergunta.textContent = perguntaAtual.enunciado;
     caixaAlternativa.textContent=" ";
     mostraAlternativas();
@@ -69,11 +70,13 @@ function mostraAlternativas() {
 }
 function respostaSelecionada(opcaoSelecionada){
     const afirmacoes = opcaoSelecionada.afirmativa;
-    respostas = afirmacoes;
+    respostas += afirmacoes;
     posicao++;
     mostraPergunta();
 }
 function mostraResultado(){
-    
+    caixaPergunta.textContent="Em 25 anos..."
+    textoResultado.textContent= respostas;
+    caixaAlternativa.textContent="";
 }
 mostraPergunta();
